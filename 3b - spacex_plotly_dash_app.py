@@ -81,7 +81,7 @@ def get_scatter_chart(entered_site):
         selected_df = spacex_df.loc[spacex_df['Launch Site'] == entered_site]
         filtered_df = selected_df[(selected_df['Payload Mass (kg)']>=payload_slider[0])
         &(selected_df['Payload Mass (kg)']<=payload_slider[1])]
-        scatter = px.scatater(filtered_df, x = "Payload Mass (kg)", y = "class",
+        scatter = px.scatter(filtered_df, x = "Payload Mass (kg)", y = "class",
         color="Booster Version Category",
         title='Outcomes vs Payload Mass for Selected Site')
         return scatter
