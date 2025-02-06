@@ -57,13 +57,13 @@ def get_pie_chart(entered_site):
     if entered_site == 'ALL':
         pie = px.pie(values=filtered_df.groupby('Launch Site')['class'].mean(), 
                      names=filtered_df.groupby('Launch Site')['Launch Site'].first(), 
-        title='Outcomes for All Sites')
+        title='Total Success Launches by Site')
     else:
         # return the outcomes piechart for a selected site
         selected_df = filtered_df.loc[filtered_df['Launch Site'] == str(entered_site)]
         pie = px.pie(values = selected_df['class'].value_counts(normalize=True),
         names=selected_df['class'].unique(), 
-        title='Outcomes for {}'.format(entered_site))
+        title='Total Success Launches for Site {}'.format(entered_site))
     return pie
 
 # TASK 4:
@@ -76,7 +76,7 @@ def get_scatter_chart(entered_site):
     if entered_site == 'ALL':
         scatter = px.scatter(filtered_df, x = "Payload Mass (kg)", y = "class",
         color="Booster Version Category",
-        title='Outcomes vs Payload Mass for All Sites')
+        title='Correlation Between Payload and Success for All Sites')
     else:
         # return the outcomes piechart for a selected site
         selected_df = spacex_df.loc[spacex_df['Launch Site'] == str(entered_site)]
@@ -84,7 +84,7 @@ def get_scatter_chart(entered_site):
         &(selected_df['Payload Mass (kg)']<=payload_slider[1])]
         scatter = px.scatter(filtered_df, x = "Payload Mass (kg)", y = "class",
         color="Booster Version Category",
-        title='Outcomes vs Payload Mass for Selected Site')
+        title='Correlation Between Payload and Success for Site {}'.format(entered_site))
     return scatter
 
 # Run the app
