@@ -20,6 +20,11 @@ Therefore if we can determine if the first stage will land, we can determine the
 - Perform interactive visual analytics using Folium and Plotly Dash
 - Perform predictive analysis using classification models
   - Build, tune, evaluate logistic regression, SVM, Decision Tree, and K Nearest Neighbors classification models via Scikit-Learn
+## 📄 Results
+- Exploratory data analysis results
+- Interactive analytics demo in screenshots
+- Predictive analysis results
+
 
 
 
