@@ -24,6 +24,16 @@ Therefore if we can determine if the first stage will land, we can determine the
 - Exploratory data analysis results
 - Interactive analytics demo in screenshots
 - Predictive analysis results
+## 📄 Conclusions
+- Number of launch successes increases as number of flights increases.
+- Orbits ES-L1, HEO, and SSO have the highest success rates.
+- Yearly average success rate has been rising significantly since 2013.
+- All the launch sites are located near the coastlines and close to the equator line
+- Site KSC LC-39A has the most success launches.
+- Lower payload mass have more success launches than higher payload mass.
+- The best machine learning models to make predictions on launch success are SVM and K Nearest Neighbors.
+
+
 
 
 
